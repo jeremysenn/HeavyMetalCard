@@ -1,0 +1,18 @@
+-# title "Field Description"
+
+%p
+  %strong Tablename:
+  = @field_description.TableName
+%p
+  %strong Fieldname:
+  = @field_description.FieldName
+%p
+  %strong Fielddescription:
+  = @field_description.FieldDescription
+
+%p
+  = link_to "Edit", edit_field_description_path(@field_description)
+  |
+  = link_to "Destroy", @field_description, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", field_descriptions_path

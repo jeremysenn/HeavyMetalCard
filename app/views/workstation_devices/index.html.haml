@@ -1,0 +1,26 @@
+- model_class = WorkstationDevice
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'WorkstationID'
+      %th= 'PinPadID'
+      %th= 'ATMDevID'
+      %th= 'CompanyNbr'
+      %th= 'IPAddr'
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @workstation_devices.each do |workstation_device|
+      %tr
+        %td= link_to workstation_device.WorkstationID, workstation_device_path(workstation_device)
+        %td= workstation_device.PinPadID
+        %td= workstation_device.ATMDevID
+        %td= workstation_device.CompanyNbr
+        %td= workstation_device.IPAddr
+        %td
+          = link_to 'Show', workstation_device, :class => 'btn btn-mini btn-success'
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_workstation_device_path(workstation_device), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), workstation_device_path(workstation_device), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_workstation_device_path, :class => 'btn btn-primary'

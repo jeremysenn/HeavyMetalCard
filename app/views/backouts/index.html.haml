@@ -1,0 +1,31 @@
+-# title "Backouts"
+
+%table
+  %tr
+    %th ID
+    %th Datetime
+    %th Scanid
+    %th Status
+    %th Keyname
+    %th Keyvalue
+    %th Table
+    %th Databasename
+    %th Operation
+    %th Fieldname
+  - for backout in @backouts
+    %tr
+      %td= backout.id
+      %td= backout.DateTime
+      %td= backout.ScanID
+      %td= backout.Status
+      %td= backout.KeyName
+      %td= backout.KeyValue
+      %td= backout.Table
+      %td= backout.DatabaseName
+      %td= backout.Operation
+      %td= backout.FieldName
+      %td= link_to 'Show', backout
+      %td= link_to 'Edit', edit_backout_path(backout)
+      %td= link_to 'Destroy', backout, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Backout", new_backout_path

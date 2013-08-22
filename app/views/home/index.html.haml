@@ -1,4 +1,9 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+%h3 Tables
+
+%p= link_to 'WorkstationDevice', workstation_devices_path
+%p= link_to 'WorkstationCamera', workstation_cameras_path
+
+- if false
+  - @users.each do |user|
+    %p
+      User: #{link_to user.name, user}

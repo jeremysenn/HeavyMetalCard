@@ -1,0 +1,32 @@
+-# title "Workstation Cameras"
+
+- model_class = WorkstationCamera
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:Companyid)
+      %th= model_class.human_attribute_name(:Workstationid)
+      %th= model_class.human_attribute_name(:Eventcode)
+      %th= model_class.human_attribute_name(:Cameraname)
+      %th= model_class.human_attribute_name(:Jpeggerhost)
+      %th= model_class.human_attribute_name(:Jpeggerport)
+      %th= model_class.human_attribute_name(:Waitrefresh)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @workstation_cameras.each do |workstation_camera|
+      %tr
+        %td= workstation_camera.CompanyID
+        %td= workstation_camera.WorkstationID
+        %td= workstation_camera.EventCode
+        %td= workstation_camera.CameraName
+        %td= workstation_camera.JpeggerHost
+        %td= workstation_camera.JpeggerPort
+        %td= workstation_camera.WaitRefresh
+        %td
+          = link_to 'Show', workstation_camera, :class => 'btn btn-mini btn-success'
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_workstation_camera_path(workstation_camera), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), workstation_camera_path(workstation_camera), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_workstation_camera_path, :class => 'btn btn-primary'

@@ -1,0 +1,30 @@
+- title "Workstation Camera"
+
+%p
+  %strong Companyid:
+  = @workstation_camera.CompanyID
+%p
+  %strong Workstationid:
+  = @workstation_camera.WorkstationID
+%p
+  %strong Eventcode:
+  = @workstation_camera.EventCode
+%p
+  %strong Cameraname:
+  = @workstation_camera.CameraName
+%p
+  %strong Jpeggerhost:
+  = @workstation_camera.JpeggerHost
+%p
+  %strong Jpeggerport:
+  = @workstation_camera.JpeggerPort
+%p
+  %strong Waitrefresh:
+  = @workstation_camera.WaitRefresh
+
+%p
+  = link_to "Edit", edit_workstation_camera_path(@workstation_camera)
+  |
+  = link_to "Destroy", @workstation_camera, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", workstation_cameras_path

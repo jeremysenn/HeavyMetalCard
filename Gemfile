@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '3.2.6'
 gem 'sqlite3'
+gem 'tiny_tds' #sql connection
+gem 'activerecord-sqlserver-adapter'#, '~> 3.1.0'
+gem "nifty-generators", :group => :development
+gem 'mysql2'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -86,3 +91,5 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
+
+gem "mocha", :group => :test

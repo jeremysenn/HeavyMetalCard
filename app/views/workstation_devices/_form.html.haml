@@ -1,0 +1,24 @@
+= form_for @workstation_device, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :WorkstationID, :class => 'control-label'
+    .controls
+      = f.number_field :WorkstationID, :class => 'number_field'
+  .control-group
+    = f.label :PinPadID, :class => 'control-label'
+    .controls
+      = f.number_field :PinPadID, :class => 'number_field'
+  .control-group
+    = f.label :ATMDevID, :class => 'control-label'
+    .controls
+      = f.number_field :ATMDevID, :class => 'number_field'
+  .control-group
+    = f.label :CompanyNbr, :class => 'control-label'
+    .controls
+      = f.number_field :CompanyNbr, :class => 'number_field'
+  .control-group
+    = f.label :IPAddr, :class => 'control-label'
+    .controls
+      = f.text_field :IPAddr, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), workstation_devices_path, :class => 'btn'

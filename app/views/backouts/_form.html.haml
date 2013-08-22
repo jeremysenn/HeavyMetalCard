@@ -1,0 +1,40 @@
+= form_for @backout do |f|
+  = f.error_messages
+  %p
+    = f.label :DateTime
+    %br
+    = f.datetime_select :DateTime
+  %p
+    = f.label :ScanID
+    %br
+    = f.number_field :ScanID
+  %p
+    = f.label :Status
+    %br
+    = f.check_box :Status
+  %p
+    = f.label :KeyName
+    %br
+    = f.text_field :KeyName
+  %p
+    = f.label :KeyValue
+    %br
+    = f.text_field :KeyValue
+  %p
+    = f.label :Table
+    %br
+    = f.text_field :Table
+  %p
+    = f.label :DatabaseName
+    %br
+    = f.text_field :DatabaseName
+  %p
+    = f.label :Operation
+    %br
+    = f.number_field :Operation
+  %p
+    = f.label :FieldName
+    %br
+    = f.text_field :FieldName
+  %p
+    = f.submit

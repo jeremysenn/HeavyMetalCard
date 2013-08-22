@@ -1,0 +1,17 @@
+one:
+  CompanyID: 1
+  WorkstationID: 1
+  EventCode: MyString
+  CameraName: MyString
+  JpeggerHost: MyString
+  JpeggerPort: 1
+  WaitRefresh: 1
+
+two:
+  CompanyID: 1
+  WorkstationID: 1
+  EventCode: MyString
+  CameraName: MyString
+  JpeggerHost: MyString
+  JpeggerPort: 1
+  WaitRefresh: 1

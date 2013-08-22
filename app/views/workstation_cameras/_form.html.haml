@@ -1,0 +1,11 @@
+= simple_form_for @workstation_camera, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :CompanyID, :input_html => {:class => 'span1'}
+  = f.input :WorkstationID, :input_html => {:class => 'span1'}
+  = f.input :EventCode, :input_html => {:class => 'span2'}
+  = f.input :CameraName
+  = f.input :JpeggerHost
+  = f.input :JpeggerPort
+  = f.input :WaitRefresh, :input_html => {:class => 'span2'}
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), workstation_cameras_path, :class => 'btn'
